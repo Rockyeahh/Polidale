@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
     private Story story;        // Loads the Ink.Runtime Story class that represents the complete Ink narrative.
 
     public Text textPrefab;
-    //public Text moneyTextPrefab;
+    public Text moneyTextPrefab;
     public Button buttonPrefab;
 
     void Start()
@@ -29,17 +29,24 @@ public class GameController : MonoBehaviour
         eraseUI();
 
 
-        //Text moneyText = Instantiate(moneyTextPrefab) as Text;
+        Text moneyText = Instantiate(moneyTextPrefab) as Text;
         Text storyText = Instantiate(textPrefab) as Text;
 
-        // Observe the variable "example"
-        //
+        // Try Text moneyText moneyTextPrefab
+        // Then in the editor just have it be it's own thing that doesn't need to be spawned.
+        // May need to be a whole other canvas with it attached that also uses the ink script? Fuck that'll probably fail.
+        // Is it possible to work this shit without the vertical group crap?
+
+        //moneyText.transform.SetParent(this.transform, false);
+
         // When it changes, call a lambda expression.
         // Pass it the name of the variable and the new value.
         story.ObserveVariable("starting_money", (variableName, newValue) =>
         {
             // Print the new value
             Debug.Log(newValue);
+            //moneyText.text = newValue.ToString();
+            moneyText.text = "Money: " + (int)newValue;
         });
 
         string text = LoadStoryChunk();
