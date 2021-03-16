@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 11bb09d4909da1f49888f162e5399745
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Bricktown
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 906bd0c2c6c87834f81e99fec5c0fd9c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
