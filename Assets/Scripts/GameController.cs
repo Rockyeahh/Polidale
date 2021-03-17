@@ -11,8 +11,10 @@ public class GameController : MonoBehaviour
     private Story story;        // Loads the Ink.Runtime Story class that represents the complete Ink narrative.
 
     public Text textPrefab;
-    public Text moneyTextPrefab;
+    //public Text moneyTextPrefab;
     public Button buttonPrefab;
+
+    public int currentMoney;
 
     void Start()
     {
@@ -29,7 +31,7 @@ public class GameController : MonoBehaviour
         eraseUI();
 
 
-        Text moneyText = Instantiate(moneyTextPrefab) as Text;
+        //Text moneyText = Instantiate(moneyTextPrefab) as Text;
         Text storyText = Instantiate(textPrefab) as Text;
 
         // Try Text moneyText moneyTextPrefab
@@ -39,14 +41,19 @@ public class GameController : MonoBehaviour
 
         //moneyText.transform.SetParent(this.transform, false);
 
+        //Text moneyText = GetComponent<Text>();
         // When it changes, call a lambda expression.
         // Pass it the name of the variable and the new value.
+
         story.ObserveVariable("starting_money", (variableName, newValue) =>
         {
             // Print the new value
             Debug.Log(newValue);
+            currentMoney = (int)newValue;   //  This works. Don't fuck with it.
+            //print("currentMoney " + currentMoney);
+
             //moneyText.text = newValue.ToString();
-            moneyText.text = "Money: " + (int)newValue;
+            //moneyText.text = "Money: " + (int)newValue;
         });
 
         string text = LoadStoryChunk();
