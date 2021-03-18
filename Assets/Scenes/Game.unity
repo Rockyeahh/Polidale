@@ -322,6 +322,7 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: f5ec28f812bb02547998ec229e655a2c, type: 3}
   textPrefab: {fileID: 2732343692196840393, guid: a75034c4efba4f44baa69e0d31c75773, type: 3}
   buttonPrefab: {fileID: 8052808123792834817, guid: a599c25c5389b6e47979ca74c9f666a2, type: 3}
+  currentMoney: 0
 --- !u!114 &1029527832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,6 +456,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MoneyText
       objectReference: {fileID: 0}
+    - target: {fileID: 7863747761849314105, guid: 4a8e71956e0e056408b214da6d6c97b6, type: 3}
+      propertyPath: m_TagString
+      value: MoneyText
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a8e71956e0e056408b214da6d6c97b6, type: 3}
 --- !u!224 &1084441085 stripped
@@ -462,17 +467,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7863747761849314104, guid: 4a8e71956e0e056408b214da6d6c97b6, type: 3}
   m_PrefabInstance: {fileID: 1084441084}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1084441086 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7863747761849314119, guid: 4a8e71956e0e056408b214da6d6c97b6, type: 3}
-  m_PrefabInstance: {fileID: 1084441084}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2077233576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1270360357
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: f5ec28f812bb02547998ec229e655a2c, type: 3}
-  moneyTextPrefab: {fileID: 1084441086}
+  gameController: {fileID: 1029527831}
 --- !u!1 &2133125104
 GameObject:
   m_ObjectHideFlags: 0

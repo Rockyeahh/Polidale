@@ -9,6 +9,7 @@ public class MoneyDisplay : MonoBehaviour
     public TextAsset inkJSON;
     //public Text moneyTextPrefab;
     Text moneyText;
+    //GameObject moneyText;
     GameController gameController;
     
     private Story story;
@@ -17,10 +18,12 @@ public class MoneyDisplay : MonoBehaviour
     void Start()
     {
         story = new Story(inkJSON.text);
+        //moneyText = GameObject.FindWithTag("MoneyText");
         // Get gameobject component Text
         Text moneyText = GetComponent<Text>();
-        GameController gameController = GetComponent<GameController>();
-        moneyText.text = gameController.currentMoney.ToString();    // ERROR Not set to an instance of an object.
+
+        GameController gameController = GameObject.Find("Canvas").GetComponent<GameController>(); // Use find with tag or something else that's faster and better than GameObject.Find
+        moneyText.text = gameController.currentMoney.ToString();
     }
 
     // Update is called once per frame
