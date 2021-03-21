@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 1029527831}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -460,6 +460,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: MoneyText
       objectReference: {fileID: 0}
+    - target: {fileID: 7863747761849314119, guid: 4a8e71956e0e056408b214da6d6c97b6, type: 3}
+      propertyPath: m_Text
+      value: 203
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a8e71956e0e056408b214da6d6c97b6, type: 3}
 --- !u!224 &1084441085 stripped
@@ -551,7 +555,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: f5ec28f812bb02547998ec229e655a2c, type: 3}
-  gameController: {fileID: 1029527831}
 --- !u!1 &2133125104
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +569,7 @@ GameObject:
   - component: {fileID: 2133125105}
   m_Layer: 5
   m_Name: Canvas 2
-  m_TagString: Untagged
+  m_TagString: Canvas 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
