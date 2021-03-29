@@ -12,6 +12,11 @@ public class MoneyDisplay : MonoBehaviour
     
     private Story story;
 
+    void Awake()
+    {   //moneyText.text = ("203"); // This just made it permantly stay as 203.
+        //moneyText.text.ToString();
+    }
+
     void Start()
     {
         story = new Story(inkJSON.text);

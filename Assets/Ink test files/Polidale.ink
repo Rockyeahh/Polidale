@@ -7,6 +7,8 @@ VAR riotStarted = false
 
 // Introduction
 
+~ starting_money = starting_money
+
 Wilfred Bortlefish is off to Polidale to bring some excitement into their life. A big port town like Polidale is bound to be filled with interesting people and things to do or whatever it is that they say about it. Wilfred isn't one for research. They'd be hard pressed to spell the word, let alone attempt it. Getting away from their sleepy village of Littletoad should be a good change of pace. Wilfred was just a simple carpenter but they've got dreams. They aren't big dreams. They aren't imaginative dreams but they are dreams and that'll have to do.
 
 A bright spring morning. The wind is calm. The road is clear. A stout (stout? Am I thinking of booze again?) red cheeked traveller named Wilfred Bottlefish plods along with a brown leather satchel strapped to their person. (Now describe clothes, hat and so on). The edge of the forest path gave way to open fields. Wilfred plodded along in the warm sunshine. The breeze was a gentle one and even they couldn't complain. The path soon became a paved road with only a few holes and cracks as opposed to the typical death trap roads of the village of Littletoad. (we know it’s a village so it probably doesn’t make sense to explain that again.)
