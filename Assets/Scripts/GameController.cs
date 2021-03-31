@@ -11,7 +11,6 @@ public class GameController : MonoBehaviour
     private Story story;        // Loads the Ink.Runtime Story class that represents the complete Ink narrative.
 
     public Text textPrefab;
-    //public Text moneyTextPrefab;
     public Button buttonPrefab;
 
     public int currentMoney;
@@ -30,20 +29,7 @@ public class GameController : MonoBehaviour
         // Clear the UI
         eraseUI();
 
-
-        //Text moneyText = Instantiate(moneyTextPrefab) as Text;
         Text storyText = Instantiate(textPrefab) as Text;
-
-        // Try Text moneyText moneyTextPrefab
-        // Then in the editor just have it be it's own thing that doesn't need to be spawned.
-        // May need to be a whole other canvas with it attached that also uses the ink script? Fuck that'll probably fail.
-        // Is it possible to work this shit without the vertical group crap?
-
-        //moneyText.transform.SetParent(this.transform, false);
-
-        //Text moneyText = GetComponent<Text>();
-        // When it changes, call a lambda expression.
-        // Pass it the name of the variable and the new value.
 
         story.ObserveVariable("starting_money", (variableName, newValue) =>
         {
@@ -51,9 +37,6 @@ public class GameController : MonoBehaviour
             Debug.Log(newValue);
             currentMoney = (int)newValue;   //  This works. Don't fuck with it.
             //print("currentMoney " + currentMoney);
-
-            //moneyText.text = newValue.ToString();
-            //moneyText.text = "Money: " + (int)newValue;
         });
 
         string text = LoadStoryChunk();
@@ -66,9 +49,7 @@ public class GameController : MonoBehaviour
         }
 
         storyText.text = text;
-        storyText.transform.SetParent(this.transform, false);       // (this.transform, false);
-        //moneyText.text = text;
-        //moneyText.transform.SetParent(this.transform, false);
+        storyText.transform.SetParent(this.transform, false);
 
         foreach (Choice choice in story.currentChoices)
         {

@@ -7,7 +7,7 @@ VAR riotStarted = false
 
 // Introduction
 
-~ starting_money = starting_money
+~ starting_money = starting_money + 0
 
 Wilfred Bortlefish is off to Polidale to bring some excitement into their life. A big port town like Polidale is bound to be filled with interesting people and things to do or whatever it is that they say about it. Wilfred isn't one for research. They'd be hard pressed to spell the word, let alone attempt it. Getting away from their sleepy village of Littletoad should be a good change of pace. Wilfred was just a simple carpenter but they've got dreams. They aren't big dreams. They aren't imaginative dreams but they are dreams and that'll have to do.
 
@@ -42,17 +42,13 @@ The toll worker panics. “Don't leave! The toll is only a bloom."
 Wilfred pays the toll and waits for the barrier to raise.
 
 ~ starting_money = starting_money - 1
-Wilfred now has {starting_money} blooms left.
-
 
 They smile. “Now if you want the barrier raised that'll be one bloom.”
 Wilfred pays another bloom.
 ~ starting_money = starting_money - 1
-Wilfred now has {starting_money} blooms left.
 They hand them a pamphlet that is tied to a piece of thin rope.
 Wilfred sighs and hands them another bloom and the rope releases the pamphlet.
 ~ starting_money = starting_money - 1
-Wilfred now has {starting_money} blooms left.
 The barrier raises.
 Wilfred looks at the pamphlet. The pamphlet reads; 
 		The pamphlet of pedantic politeness.
@@ -183,7 +179,6 @@ Barry cries louder as they take the handkerchief and blow their nose snot into i
 					- else: 
 				    Wilfred could not afford it.
 					}
-Wilfred now has {starting_money} blooms left.
 
 	Wilfred grumbles as they leave with a sack of potatoes and half of their money wasted on potatoes.
 	-> Outside_Barrys_Used_but_better_Goods
@@ -215,7 +210,6 @@ Wilfred runs out of the shop in a chaotic mess, nearly tripping as they went.
 					- else: 
 				    Wilfred could not afford it.
 					}
-Wilfred now has {starting_money} blooms left.
 -> Barry_Executive_Range_Options
 
 *   B) “The necklace could be of some use but it’s far outside my price range. So I’ll pick the blunt dagger instead.”
@@ -233,7 +227,6 @@ Wilfred now has {starting_money} blooms left.
 					- else: 
 				    Wilfred could not afford it.
 					}
-Wilfred now has {starting_money} blooms left.
 -> Barry_Executive_Range_Options
 
 *   D) The almost clean plate.
@@ -243,7 +236,6 @@ Wilfred now has {starting_money} blooms left.
 					- else: 
 				    Wilfred could not afford it.
 					}
-Wilfred now has {starting_money} blooms left.
     		-> Barry_Executive_Range_Options
 
 *   E) Decline any of them and just leave instead.
@@ -260,7 +252,6 @@ Wilfred now has {starting_money} blooms left.
 				- else: 
 				    Wilfred could not afford it.
 					}
-Wilfred now has {starting_money} blooms left.
 			//Wilfred buys the necklace and now had no more money to spend and thus leaves the shop.
 -> Barry_Executive_Range_Options
 
@@ -396,7 +387,6 @@ Wilfred sighs. “Fine.” Wilfred hands them the 20 and takes the bag of food.
 					- else: 
 				    Wilfred could not afford it.
 					}
-Wilfred now has {starting_money} blooms left.
         {   strikes < 3: 
     ~ strikes = strikes + 1
             -> Market_Square_Stalls
@@ -412,7 +402,6 @@ Wilfred pays them with a look of disbelief. They leave now with their bag of bak
 					- else: 
 				    Wilfred could not afford it.
 					}
-Wilfred now has {starting_money} blooms left.
 -> Market_Square_Stalls
 
 +   You can’t afford it and leave.
@@ -446,7 +435,6 @@ Wilfred leaves with a piece of paper informing them of their products future del
 					- else: 
 				    Wilfred could not afford it.
 					}
-Wilfred now has {starting_money} blooms left.
 -> Market_Square_Stalls
 
 *   B) Sign next to ‘small time charm, all the time fun’. //(WHAT? Anyway, this gibberish is the worst choice.)
@@ -464,7 +452,6 @@ Wilfred walks away with a single strange looking but shiny coin.
 					- else: 
 				    Wilfred could not afford it.
 					}
-Wilfred now has {starting_money} blooms left.
 “They said that it’d prove it’s worth eventually.” Wilfred raises an eyebrow at this, before shrugging and putting it into their bag.
 -> Market_Square_Stalls
 
@@ -510,7 +497,6 @@ Wilfred looks around unsure. “Well I guess I could.” They stutter out the la
 *   “I’ll play!” (If you have any money left this is an option.)
 Wilfred starts off winning a few coins but eventually loses track of time as the kids cheer Wilfred on. The wins slow down as the dice keeps landing on the same side. Soon Wilfred is on the last 10 blooms, until it’s gone. The thrill was over. Wilfred was now out of spending money.
 	~ starting_money = 0
-Wilfred now has {starting_money} blooms left.
 
 “Well that’s how it goes pal.” The middle child slaps Wilfred on the back and they head off into the night.
 Wilfred sighs as the fire goes out once the kids have all left, before Wilfred finally stands up with a dour look upon their face.
@@ -775,7 +761,6 @@ The hooded figure sighs. “So are you ready to go?”
 					- else: 
 				    Wilfred could not afford it.
 					}
-Wilfred now has {starting_money} blooms left.
 
 -> Inn_Options
 
@@ -786,7 +771,6 @@ Wilfred now has {starting_money} blooms left.
 							- else: 
 				    Wilfred could not afford it.
 					}
-Wilfred now has {starting_money} blooms left.
 -> Inn_Options
 
 *   C) Order beer
@@ -796,7 +780,6 @@ Wilfred now has {starting_money} blooms left.
 								- else: 
 				    Wilfred could not afford it.
 					}
-Wilfred now has {starting_money} blooms left.
 -> Inn_Options
 
 *   D) Order mead
@@ -806,7 +789,6 @@ Wilfred now has {starting_money} blooms left.
 								- else: 
 				    Wilfred could not afford it.
 					}
-Wilfred now has {starting_money} blooms left.
 -> Inn_Options
 
 =   Table_options
