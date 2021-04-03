@@ -23,7 +23,7 @@ The walls of Polidale seemed to glisten in the sunlight but primarily around the
 
 As Wilfred approached the enormous, glorious and astounding well kept, shinning, imposing gate to Polidale, something could be seen out of place. A small raggedy wooden toll booth sat in the middle of the road just before the gate. Within, there was a sleeping fellow with their feet up, a belly poking out from an ill-fitting shirt and a distinct smell of booze. The booth didn't even block the entire road.
 
-*       A) Walk up to the toll booth and attempt to waking them.
+*       A) Walk up to the toll booth and attempt to wake them.
         -> UseTollBooth
 
 *       B) Walk around the booth and head into the castle.
@@ -139,7 +139,7 @@ A bell jingles as Wilfred enters the shop. It stops suddenly rather than end in 
 *   C) Are you insane? That’s a terrible deal! //(strike)
     Barry steps back a step confused. “I don’t know how you can’t see the value of this deal.”
 
-    {   strikes < 3: 
+    {   strikes < 2: 
     ~ strikes = strikes + 1
             -> Barry_Terrible_Deal_Options
     - else: 
@@ -147,7 +147,7 @@ A bell jingles as Wilfred enters the shop. It stops suddenly rather than end in 
     }
     
 *   D) This thing is disgusting. //(strike)
-    {   strikes < 3: 
+    {   strikes < 2: 
     ~ strikes = strikes + 1
             -> Barry_Deal_Disgusting
     - else: 
@@ -185,7 +185,7 @@ Barry cries louder as they take the handkerchief and blow their nose snot into i
 	
 *   B) Leg it. //(strike)
 Wilfred runs out of the shop in a chaotic mess, nearly tripping as they went.
-    {   strikes < 3: 
+    {   strikes < 2: 
     ~ strikes = strikes + 1
             -> Outside_Barrys_Used_but_better_Goods
     - else: 
@@ -276,6 +276,9 @@ Wilfred watches them as they head to the left of Wilfred. In the distance they s
 +   C) Turn right and walk towards the sounds of bustling crowds.
 -> Market_Square
 
++   D) Go back down the plain looking street.
+-> Outside_Barrys_Used_but_better_Goods
+
 === The_Pit
 LOCATION: The Pit
 
@@ -289,7 +292,7 @@ Wilfred looked down into the vast pit and could not see the bottom.
 *   A) Chuck a stone into the pit. //(strike)
     A small child in a guards uniform walks over to Wilfred and hands them a red piece of paper that reads “Littering without a permit. One strike received.” Wilfred grumbles.
     The small child leaves without a word.
-        {   strikes < 3: 
+        {   strikes < 2: 
     ~ strikes = strikes + 1
             -> The_road_outside_The_Pit
     - else: 
@@ -387,7 +390,7 @@ Wilfred sighs. “Fine.” Wilfred hands them the 20 and takes the bag of food.
 					- else: 
 				    Wilfred could not afford it.
 					}
-        {   strikes < 3: 
+        {   strikes < 2: 
     ~ strikes = strikes + 1
             -> Market_Square_Stalls
     - else: 
@@ -558,7 +561,7 @@ They stared off into distance, as if Wilfred wasn’t even standing before them.
 
 “That is a matter for the Port authorities. Tarnishing their good name is a truly terrible thing!” The clerk shakes their head. 
 A small child in a guards uniform hands Wilfred a note, before marching out of the building. The note reads; 'You have offended the good name of the Port authorities. You have been given one strike.'
-        {   strikes < 3: 
+        {   strikes < 2: 
     ~ strikes = strikes + 1
             -> Clerk_Options
     - else: 
@@ -640,7 +643,7 @@ The constant struggle was grating at Wilfred’s patience. Alas they stumbled an
 Once they reached the street a small child in uniform watched this fool crawl out. They made a “Hmph” sound and abruptly left.
 On the floor in front of Wilfred was a note stating that they had violated public property. This was a private garden and not for public use!
 “How does one call that a garden? It’s a nightmare!” Wilfred exasperatedly asks to no one in particular.
-    {   strikes < 3: 
+    {   strikes < 2: 
     ~ strikes = strikes + 1
             -> Outside_an_alleyway
     - else: 
@@ -802,7 +805,7 @@ The hooded figure sighs. “So are you ready to go?”
 	“Oi, put your feet down!” The innkeeper shouts.
 	Wilfred hurridly puts their feet down.
 	After a short while they decide to get up and go do something else.
-	        {   strikes < 3: 
+	        {   strikes < 2: 
     ~ strikes = strikes + 1
             -> Table_options
     - else: 
