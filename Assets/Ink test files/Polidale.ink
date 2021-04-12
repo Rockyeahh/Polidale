@@ -11,7 +11,8 @@ VAR riotStarted = false
 
 Wilfred Bortlefish is off to Polidale to bring some excitement into their life. A big port town like Polidale is bound to be filled with interesting people and things to do or whatever it is that they say about it. Wilfred isn't one for research. They'd be hard pressed to spell the word, let alone attempt it. Getting away from their sleepy village of Littletoad should be a good change of pace. Wilfred was just a simple carpenter but they've got dreams. They aren't big dreams. They aren't imaginative dreams but they are dreams and that'll have to do.
 
-A bright spring morning. The wind is calm. The road is clear. A stout (stout? Am I thinking of booze again?) red cheeked traveller named Wilfred Bottlefish plods along with a brown leather satchel strapped to their person. (Now describe clothes, hat and so on). The edge of the forest path gave way to open fields. Wilfred plodded along in the warm sunshine. The breeze was a gentle one and even they couldn't complain. The path soon became a paved road with only a few holes and cracks as opposed to the typical death trap roads of the village of Littletoad. (we know it’s a village so it probably doesn’t make sense to explain that again.)
+A bright spring morning. The wind is calm. The road is clear. A stout red cheeked traveller named Wilfred Bottlefish plods along with a brown leather satchel strapped to their person. The edge of the forest path gave way to open fields. Wilfred plodded along in the warm sunshine. The breeze was a gentle one and even they couldn't complain. The path soon became a paved road with only a few holes and cracks as opposed to the typical death trap roads of Littletoad.
+// (Describe clothes, hat and so on before 'The edge of the forest gave...').
 
 The walls of Polidale seemed to glisten in the sunlight but primarily around the gate. Someone must have made a conscious effort to give a good first impression. Wilfred smiled at the impressive sight, oblivious of the dishevelled homes in the surrounding fields or the grim faced farmers of those very same fields.
 
@@ -52,7 +53,7 @@ Wilfred sighs and hands them another bloom and the rope releases the pamphlet.
 The barrier raises.
 Wilfred looks at the pamphlet. The pamphlet reads; 
 		The pamphlet of pedantic politeness.
-1. Do not say thank you, say "Better that I don't see you." (“again”)	[Revise and/or change this later]
+1. Do not say thank you, say "Better that I don't see you." //(“again”)	[Revise and/or change this later]
 2. Do not haggle impolitely.
 3. Do not try an blar bla bla bleh
 4. Do not bal bal bal..
@@ -66,7 +67,7 @@ Wilfred quickly got bored as the lines all started to roll into one long dreary 
 
 You pick up a pamphlet on the ground on your way in. The pamphlet reads; 
 		The pamphlet of pedantic politeness.
-1. Do not say thank you, say "Better that I don't see you." (“again”)	[Revise and/or change this later]
+1. Do not say thank you, say "Better that I don't see you." //(“again”)	[Revise and/or change this later]
 2. Do not haggle impolitely.
 3. Do not try an blar bla bla bleh
 4. Do not bal bal bal..
@@ -79,10 +80,9 @@ Wilfred quickly got bored as the lines all started to roll into one long dreary 
 === Outside_Polidale_Fail_State
 LOCATION: Outside Polidale in a ditch
 You are thrown out of Polidale and land on your arse.
-(How do I explain that you can only have three strikes/fuck ups and you're out.)
+//(How do I explain that you can only have three strikes/fuck ups and you're out.)
 +   DO YOU WANT TO PLAY AGAIN?
-(JUST imagine a restart button here!)
-(Would it be better to be sent back to the introduction, rather than the toll booth?)
+//(Would it be better to be sent back to the introduction, rather than the toll booth?)
 -> TollBooth
 
 === Just_beyond_the_gate_inside_the_town_walls
@@ -123,20 +123,23 @@ A bell jingles as Wilfred enters the shop. It stops suddenly rather than end in 
 	Wilfred stares at used left shoe for a moment before a salesman appears with his arm around 	Wilfred.
 	“Welcome to Barry’s Used but better Goods. I’m Barry.”
 	Barry smiles, revealing his horrifically filthy teeth. Even Barry’s clothes were worn out. Maybe they used to look new and fashionable but not any more.
-	“We sell all kinds of high quality products here. Nothing like it can be found elsewhere. We 	are so good that they don’t even want us in market square. We’d steal all the business!”
+	“We sell all kinds of high quality products here. Nothing like it can be found elsewhere. We are so good that they don’t even want us in market square. We’d steal all the business!”
 	Wilfred stares, confused.
 	“Why?” Wilfred asks, while horrified by a single rotten potatoe that was for sale.
 	Barry spots the potatoe. “Ah you’ve seen our produce section. If you buy a potatoe for a bloom, I’ll sell ya the second and the third for only 1 and a half more”.
 	Wilfred ponders the terrible deal for a moment.
 	
-+   A) Do you have anything else? //(polite option)
++   A) Do you have anything else? 
+//(polite option)
 	-> Barry_Executive_Range
 	
-	+   B) I think I’m just going to leave. //(neutral)
+	+   B) I think I’m just going to leave. 
+	//(neutral)
 	    “Ah that’s a shame. Come back soon now.” Barry grins with his horror show teeth. Wilfred leaves the shop.
     -> Outside_Barrys_Used_but_better_Goods
 
-*   C) Are you insane? That’s a terrible deal! //(strike)
+*   C) Are you insane? That’s a terrible deal! 
+//(strike)
     Barry steps back a step confused. “I don’t know how you can’t see the value of this deal.”
 
     {   strikes < 2: 
@@ -146,7 +149,8 @@ A bell jingles as Wilfred enters the shop. It stops suddenly rather than end in 
         -> Outside_Polidale_Fail_State   
     }
     
-*   D) This thing is disgusting. //(strike)
+*   D) This thing is disgusting. 
+//(strike)
     {   strikes < 2: 
     ~ strikes = strikes + 1
             -> Barry_Deal_Disgusting
@@ -183,7 +187,8 @@ Barry cries louder as they take the handkerchief and blow their nose snot into i
 	Wilfred grumbles as they leave with a sack of potatoes and half of their money wasted on potatoes.
 	-> Outside_Barrys_Used_but_better_Goods
 	
-*   B) Leg it. //(strike)
+*   B) Leg it. 
+//(strike)
 Wilfred runs out of the shop in a chaotic mess, nearly tripping as they went.
     {   strikes < 2: 
     ~ strikes = strikes + 1
@@ -217,7 +222,7 @@ Wilfred runs out of the shop in a chaotic mess, nearly tripping as they went.
 		Wilfred interjects. “I don’t have either of those.”
 		Barry sighs. “Alas, then I cannot sell this to you?”
 		Wilfred shrugs, as it is not a big deal.
-		“What about if I lower the price of the necklace to 200 blooms.” [NOTE: THIS will use up all of Wilfred’s starting money]
+		“What about if I lower the price of the necklace to 200 blooms.”
 -> Necklace_Options
 
 *   C) The left shoe.
@@ -263,11 +268,12 @@ Wilfred runs out of the shop in a chaotic mess, nearly tripping as they went.
 === The_road_outside_The_Pit
 LOCATION: The road outside The Pit.
 
-Wilfred pauses in their walk. A cart (big wheel barrow?) filled with dead bodies, pulled along by a struggling old labourer, passes Wilfred in the street.
+Wilfred pauses in their walk. A cart filled with dead bodies, pulled along by a struggling old labourer, passes Wilfred in the street.
 
 Wilfred watches them as they head to the left of Wilfred. In the distance they stop and tip the bodies out but no sound could be heard as they hit the ground. Following this the labourer left with their cart.
 
-+   A) Turn left, walk towards the strange soundless floor. (May need to rewrite this line.)
++   A) Turn left, walk towards the strange soundless floor. 
+//(May need to rewrite this line.)
 -> The_Pit
 
 +   B) Continue forwards down this street.
@@ -289,7 +295,8 @@ Bellow that. “Have you got the picture yet? Death!”
 
 Wilfred looked down into the vast pit and could not see the bottom.
 
-*   A) Chuck a stone into the pit. //(strike)
+*   A) Chuck a stone into the pit. 
+//(strike)
     A small child in a guards uniform walks over to Wilfred and hands them a red piece of paper that reads “Littering without a permit. One strike received.” Wilfred grumbles.
     The small child leaves without a word.
         {   strikes < 2: 
@@ -379,9 +386,10 @@ The stall owner almost emotes before speaking again. “Here. 20 blooms”
 A bag of scones, buns & oatcakes is placed in front of Wilfred.
 Wilfred looks surprised.
 OPTIONS: 
-[If you are not out of money then you get A, B & C as options, otherwise C is the only option.]
+//[If you are not out of money then you get A, B & C as options, otherwise C is the only option.]
 
-*    “Thanks, I’ll take it for 15.” //(Strike) (fuck this up)
+*    “Thanks, I’ll take it for 15.” 
+//(Strike) (fuck this up)
 They are taken aback by Wilfred's manner. “Well then. 20 it is.” 
 Silence between the two of them seems to drag on for an age despite in reality only being a few seconds long.
 Wilfred sighs. “Fine.” Wilfred hands them the 20 and takes the bag of food.
@@ -397,7 +405,8 @@ Wilfred sighs. “Fine.” Wilfred hands them the 20 and takes the bag of food.
         -> Outside_Polidale_Fail_State   
     }
 
-*    “If possible, maybe, if you'd be so kind. You could possibly lower your price a smidgen. I'd be a much happier customer. Certainly.” //(Haggle politely as it’s customary to haggle but it must be done politely.)
+*    “If possible, maybe, if you'd be so kind. You could possibly lower your price a smidgen. I'd be a much happier customer. Certainly.” 
+////(Haggle politely as it’s customary to haggle but it must be done politely.)
 The stall owner grins with a satisfied smile. “You can have it for 10.”
 Wilfred pays them with a look of disbelief. They leave now with their bag of baked goods.
 	{   starting_money > 9:
@@ -440,7 +449,8 @@ Wilfred leaves with a piece of paper informing them of their products future del
 					}
 -> Market_Square_Stalls
 
-*   B) Sign next to ‘small time charm, all the time fun’. //(WHAT? Anyway, this gibberish is the worst choice.)
+*   B) Sign next to ‘small time charm, all the time fun.’
+//(WHAT? Anyway, this gibberish is the worst choice.)
 Wilfred wakes up next to the stall, which is now empty. All of their remaining money is gone, except for a small amount in a separate compartment in their bag. 
 “Well at least they weren’t very through. This way I can still get a room at the Inn.” Wilfred manages half a smile and gets up.
 	~ starting_money = 0
@@ -458,16 +468,19 @@ Wilfred walks away with a single strange looking but shiny coin.
 “They said that it’d prove it’s worth eventually.” Wilfred raises an eyebrow at this, before shrugging and putting it into their bag.
 -> Market_Square_Stalls
 
-+   D) You change your mind and walk away. (Do we let this happen?)
++   D) You change your mind and walk away. 
+//(Do we let this happen?)
 You leave the stall and a stunned sales person.
 -> Market_Square_Stalls
 
 
 = Stall_3
 Wilfred starts to browse a wine seller but while they do this the owner watches them closely, before stepping closer to Wilfred. 
-“You look familiar? Are you from Wilddledum (I kind of want to call it Fiddledum)?” “Er well n…” “Ah I knew I’d seen ya there. Wow, haha. Take one of these with ya.” They hand Wilfred a bottle of red wine. “Oh and tell Bill that I want my hat back or I’ll kick their head in.” They scream/shout it out (think angry Glaswegian) and Wilfred fights back tears. 
+“You look familiar? Are you from Wilddledum?” “Er well n…” “Ah I knew I’d seen ya there. Wow, haha. Take one of these with ya.” They hand Wilfred a bottle of red wine. “Oh and tell Bill that I want my hat back or I’ll kick their head in.” They scream/shout it out and Wilfred fights back tears. 
 “Ahh it’s good to see someone from back home. I, it takes me back.” They proceed to shake Wilfred's hand so tight that it feels like it might break. “Well off ya go then and enjoy the wine. And good luck with the sappy pricks in this town. Obsessed with their manners and so on.” They gesture at the crowd laughing as they return to work. 
 Wilfred leaves confused with their wine and waves back awkwardly at the stranger.
+// I kind of want to call it Fiddledum
+// think angry Glaswegian
 -> Market_Square_Stalls
 
 === Dead_End_Street
@@ -479,7 +492,8 @@ At last a dead end was found and Wilfred stopped to observe as best as could be 
 At the end of the street Wilfred could see a lit fire pit.
 // If you haven't been here before, then you can progress to the fire pit.
 
-* Approach the fire pit.    // Only make this a + if I can alternate the text to be that no one is at the fire pit now after your first visit there.
+* Approach the fire pit.    
+// Only make this a + if I can alternate the text to be that no one is at the fire pit now after your first visit there.
 -> Fire_Pit
 
 + Leave the dead end street.
@@ -497,7 +511,8 @@ The middle sized child hands Wilfred some dice.
 A taller kid nudges Wilfred. “Come on. Let’s playing already?”
 Wilfred looks around unsure. “Well I guess I could.” They stutter out the last word.
 
-*   “I’ll play!” (If you have any money left this is an option.)
+*   “I’ll play!” 
+// If you have any money left, this is an option.
 Wilfred starts off winning a few coins but eventually loses track of time as the kids cheer Wilfred on. The wins slow down as the dice keeps landing on the same side. Soon Wilfred is on the last 10 blooms, until it’s gone. The thrill was over. Wilfred was now out of spending money.
 	~ starting_money = 0
 
@@ -505,7 +520,8 @@ Wilfred starts off winning a few coins but eventually loses track of time as the
 Wilfred sighs as the fire goes out once the kids have all left, before Wilfred finally stands up with a dour look upon their face.
 -> Empty_Fire_Pit
 
-*   I don’t have any money left but I’ll play anyway. (If you don’t have any money left, then this option is available.)
+*   I don’t have any money left but I’ll play anyway. 
+// If you don’t have any money left, then this option is available.
 Wilfred feels a sudden pain in the back of their head. They awake by the side of the street with all of the items that they bought missing.
 -> Empty_Fire_Pit
 
@@ -557,7 +573,8 @@ They stared off into distance, as if Wilfred wasn’t even standing before them.
 -> Clerk_Options
 
 =   Clerk_Options
-*   A) I’d like to complain about the port being closed. //(wrong choice Strike)
+*   A) I’d like to complain about the port being closed. 
+//(wrong choice Strike)
 
 “That is a matter for the Port authorities. Tarnishing their good name is a truly terrible thing!” The clerk shakes their head. 
 A small child in a guards uniform hands Wilfred a note, before marching out of the building. The note reads; 'You have offended the good name of the Port authorities. You have been given one strike.'
@@ -568,23 +585,27 @@ A small child in a guards uniform hands Wilfred a note, before marching out of t
         -> Outside_Polidale_Fail_State   
     }
 
-*   B) The port gatekeeper was terribly rude to me! //(wrong choice but no Strike)
+*   B) The port gatekeeper was terribly rude to me! 
+// (wrong choice but no Strike)
 
 The clerk raises an eyebrow. “Complaining about individuals is not our concern.”
 -> Clerk_Options
 
-*   C) “I want to complain about the smell!” //(wrong choice but no Strike)
+*   C) “I want to complain about the smell!” 
+// (wrong choice but no Strike)
 
 The clerk sighs deeply. “Another one...” They add your name to a list.
-“Thank you. It has been noted. Goodbye.” They state plainly before returning to staring into space. (may need rewording)
+“Thank you. It has been noted. Goodbye.” They plainly state before returning to staring into space. 
 -> Clerk_Options
 
 *   D) I think it’s incredibly impolite that the port be closed to visitors, when it’s one of the main reasons that a tourist comes to Polidale! //(correct choice)
 
-The clerk straightens up with a serious look. “Ah this truly is awful but sadly it’s out of our hands.” The clerk sighs. They then lean in and whisper. “They say some accident occurred there but we wouldn’t dare speak of it. That wouldn’t proper. Certainly against the rules.” The clerk looks around and speaks aloud. “Thank you for your concerns. Have a wonderful stay at the Inn (might be a bit on the nose here) in town.” The clerk places the closed sign onto the counter.
+The clerk straightens up with a serious look. “Ah this truly is awful but sadly it’s out of our hands.” The clerk sighs. They then lean in and whisper. “They say some accident occurred there but we wouldn’t dare speak of it. That wouldn’t proper. Certainly against the rules.” The clerk looks around and speaks aloud. “Thank you for your concerns. Have a wonderful stay at the Inn in town.” The clerk places the closed sign onto the counter.
+// This might be a bit on the nose here. Directly pointing out that they'll be staying at the inn.
 -> Clerk_Final_Options
 
-*   E) I want to visit the port? Why can’t I? //(neither wrong nor right as it just leads to further information.)
+*   E) I want to visit the port? Why can’t I? 
+//(neither wrong nor right as it just leads to further information.)
 
 “That is not a complaint, that is a question. We are not the port authorities, are we? So please leave unless you have a complaint.” The clerk states plainly.
 -> Clerk_Options
@@ -626,7 +647,8 @@ Wilfred now stands before an alleyway. It’s dark, grim and rather smelly. The 
 *   B) Walk towards the town entrance.
 -> Just_beyond_the_gate_inside_the_town_walls
 
-*   C) Take a left up Low Tide Road (this is a shit name).
+*   C) Take a left up Low Tide Road.
+// (this is a shit name)
 -> Outside_The_Inn
 
 === Alleyway
@@ -653,7 +675,8 @@ On the floor in front of Wilfred was a note stating that they had violated publi
 === Outside_The_Inn
 LOCATION: Outside the inn.
 
-Wilfred stands before a ramshackle inn that seems older than most of the surrounding buildings. It was longer than the others too, with an almost ship like design. Outside swung a wooden sign that read; ‘The Murky Mug’ (bit of a shit name). A distinct smell of sick and piss floated in the air. (re-do this line)
+Wilfred stands before a ramshackle inn that seems older than most of the surrounding buildings. It was longer than the others too, with an almost ship like design. Outside swung a wooden sign that read; ‘The Murky Mug’. A distinct smell of sick and piss floated in the air. 
+//(re-do this line)
 
 +   A) Take a left into the Market.
 -> Market_Square
@@ -661,7 +684,8 @@ Wilfred stands before a ramshackle inn that seems older than most of the surroun
 +   B) Enter the Inn.
 -> Inside_The_Inn
 
-+   C) Walk back down Low Tide Road (terrible name).
++   C) Walk back down Low Tide Road. 
+//(terrible name)
 -> Outside_an_alleyway
 
 === Inside_The_Inn
@@ -721,13 +745,7 @@ Wilfred sits down by a cracked windows. The table is filthy. The chair creaks an
 Boredom is a certainty.
 -> Table_options
 
-// if caused riot {  }
-//	{   riotStarted == true:
-
-//					}
 +   F) Approach the hooded figure at the back, sitting alone.
-
-// Maybe use the if statement here and if you have not caused the riot yet, then the hooded figure grumbles and you leave them alone, ELSE the bellow happens.
 
 			{   riotStarted == false:
     The hooded figure grumbles as you approch, so you back away instead.
@@ -770,7 +788,8 @@ The hooded figure sighs. “So are you ready to go?”
 *   B) Order brandy
 	{   starting_money > 0:
 	~ starting_money = starting_money - 1
-		Wilfred paid for the brandy and was met by a tsk and quick look up at the ceiling from the other drinker at the bar. (NEEDS work)
+		Wilfred paid for the brandy and was met with a tsk and quick look up at the ceiling from the other drinker at the bar. 
+		// (NEEDS work)
 							- else: 
 				    Wilfred could not afford it.
 					}
@@ -779,7 +798,8 @@ The hooded figure sighs. “So are you ready to go?”
 *   C) Order beer
 	{   starting_money > 0:
 	~ starting_money = starting_money - 1
-		Before the order was even fully made a surprised grunting sound could be heard  from other beer drinker at the bar, whom quickly looked back down at their brown pint the moment that Wilfred looked over at them. (NOT quite right)
+		Before the order was even fully made, a surprised grunting sound could be heard from the other beer drinker at the bar, whom quickly looked back down at their brown pint, the moment that Wilfred looked over at them. 
+		// (NOT quite right)
 								- else: 
 				    Wilfred could not afford it.
 					}
@@ -788,7 +808,7 @@ The hooded figure sighs. “So are you ready to go?”
 *   D) Order mead
 	{   starting_money > 0:
 	~ starting_money = starting_money - 1
-		Wilfred ordered a mug mead and an approving “hmmm” sound could be heard 	coming from the other drinker leaning against the bar. They gave a slight nod of approval before returning to glaring into their pint of brown.
+		Wilfred ordered a mug mead and an approving “hmmm” sound could be heard coming from the other drinker leaning against the bar. They gave a slight nod of approval before returning to glaring into their pint of brown.
 								- else: 
 				    Wilfred could not afford it.
 					}
@@ -801,7 +821,8 @@ The hooded figure sighs. “So are you ready to go?”
 	Wilfred sighs at the boredom and decides to look for something else to do.
 	-> Table_options
 
-*   B) Put your feet up. //(STRIKE)
+*   B) Put your feet up. 
+//(STRIKE)
 	“Oi, put your feet down!” The innkeeper shouts.
 	Wilfred hurridly puts their feet down.
 	After a short while they decide to get up and go do something else.
@@ -813,7 +834,7 @@ The hooded figure sighs. “So are you ready to go?”
     }
 
 *   C) Lean back on the chair.
-	While leaning back on the chair, Wilfred nodded off for just a second and fell back onto the 	floor.
+	While leaning back on the chair, Wilfred nodded off for just a second and fell back onto the floor.
 	Now that Wilfred has failed at sitting down they decide to leave sitting down behind.
 	-> Table_options
 
@@ -825,16 +846,18 @@ LOCATION: Alley behind the Inn.
 
 The late afternoon is giving way to the evening now. This alley was cold but seemed quite short as the end of it could be seen quite clearly. The ocean was so close now.
 Wilfreds mood raises in this moment, even in the dark gloom of this empty alley and the pungent smell of rotting food and discarded rubbish.
-(Maybe write more here.)
+// (Maybe write more here.)
 
 +   A) Walk down the alley.
 -> Smugglers_Dock
 
 === Smugglers_Dock
-LOCATION: Smugglers Dock (Come up with a better name you lazy fuck)
+LOCATION: Smugglers Dock 
+// (Come up with a better name you lazy fuck)
 
-Now Wilfred stands before a small dock with a smaller ship (what type) docked in place, away from the main port. It’s difficult to see the entire port from here but it’s better than nothing. The grand scale of the place was still perceivable from here. Beyond this Wilfred could see the flotilla of fishing boats, Carracks, canal boats, house boats, ramshackle ruined boats and even a mighty galleon.
-“It’s odd to see such a big naval vessel here in the free trade town of Polidale?” (may reword this) Wilfred wondered.
+Now Wilfred stands before a small dock with a smaller Cog ship docked in place, away from the main port. It’s difficult to see the entire port from here but it’s better than nothing. The grand scale of the place was still perceivable from here. Beyond this Wilfred could see the flotilla of fishing boats, Carracks, canal boats, house boats, ramshackle ruined boats and even a mighty Galleon.
+“It’s odd to see such a big naval vessel here in the free trade town of Polidale?” Wilfred wondered.
+// may reword this
 
 Footsteps could be heard running towards the small dock. Calls of ‘Stop’ and ‘Die Scum’. All very serious. Wilfred however, is dreaming about sailing one of those massive ships.
 Further chaos erupts in the alley as swords are clashing, arrows flying, people yelping. 
